@@ -1,19 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body{
+  --black: hsl(240,6%,13%);
+  --gray: hsl(240, 9%, 89%);
+
   height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
   display: grid;
   place-items: center;
-  background-color: lightblue;
+  background-color: #333;
+}
+
+main {
+  background: url(../images/background.svg);
+  background-repeat: no-repeat;
+  width: 375px;
+  height: 100vh;
+  border-radius: 8px;
+}
+
+.container {
+  max-width: 250px;
+  margin: auto;
+  text-align: center;
+  color: var(--gray);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;/*Para não distorcer as medidas*/
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);/*ferramenta clippy css*/
 }
 
 h1 {
   font: size 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a, ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+
 }
 
 a {
-  color: black;
+  color: var(--gray);
   text-decoration: none;
+  margin-top: 0.25rem;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+footer {
+  width: 100%;
+  color: var(--gray);
+  text-align: center;
+  font-size: .75rem;
+}
+
+footer p {
+  margin: 0;
+  padding: .3rem;
 }
