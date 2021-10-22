@@ -65,14 +65,17 @@ a, ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
-
+  
 }
 
 a {
   color: var(--gray);
   text-decoration: none;
   margin-top: 0.25rem;
+}
+
+a img {
+  margin-right: .5rem;
 }
 
 p {
@@ -83,6 +86,7 @@ ul {
   margin-top: 2rem;
   list-style: none;
   padding: 0;
+  gap: .5rem;
 }
 
 footer {
@@ -90,9 +94,16 @@ footer {
   color: var(--gray);
   text-align: center;
   font-size: .75rem;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 footer p {
   margin: 0;
   padding: .3rem;
+}
+
+footer p a {
+  display: inline-block;
 }
